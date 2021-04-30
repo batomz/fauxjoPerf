@@ -1,0 +1,15 @@
+--+---------------------------------------------------------------------------------+
+--|                            Postgresql manual testing                            |
+--+---------------------------------------------------------------------------------+
+--Only used for manual testing LiteBeanBuildTest and HeavyBeanBuildTest main methods.
+--This is NOT needed if running those with junit (main method commented out).
+--The tests will create the tables and populate their rows if they do not exist.
+--+---------------------------------------------------------------------------------+
+--Step 1 - Login to the database as postgres
+--         psql -U postgres template1
+--Step 2 - Choose either (a) or (b) below:
+--         (a) edit the username in net.jectra.fauxjo.jdbc.db.PGCon.java or
+--         (b) create the user:
+--             create user test with password 'tset';
+--Step 3 - Create the database
+--         create database fjoperf ENCODING 'UTF-8' OWNER <user>;

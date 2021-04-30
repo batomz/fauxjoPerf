@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Properties>
+        <Property name="DEFAULT">
+            %highlight{%-5level %c{1}[%L] - %msg%n %rEx{full}}{INFO=blue, DEBUG=normal, WARN=yellow bold, TRACE=normal}
+        </Property>
+		<Property name="locationInfo">true</Property>
+    </Properties>
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout disableAnsi="false" pattern="${DEFAULT}"/>
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Root level="debug" additivity="false">
+			<AppenderRef ref="console"/>
+		</Root>
+	</Loggers>
+</Configuration>
